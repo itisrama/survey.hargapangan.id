@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="/administrator/components/com_gtpihpssurvey/models/fields">
+	<fields>
+		<fieldset name="item">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="tipe"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="user_id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="type"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="region_id"
+				type="selectize"
+				label="COM_GTPIHPSSURVEY_FIELD_REGION"
+				class="input-large"
+				query="SELECT id, name FROM #__gtpihpssurvey_ref_regions WHERE id IN (%s) ORDER BY id"
+				task="selectize.getRegions"
+				requests="{type:'ref_region'}"
+				required="true"
+			/>
+			<field name="name"
+				type="text"
+				label="COM_GTPIHPSSURVEY_FIELD_NAME"
+				class="input-large"
+				required="true"
+			/>
+			<field name="username"
+				label="COM_GTPIHPSSURVEY_FIELD_USERNAME"
+				type="text"
+				class="input-medium"
+				readonly="true"
+			/>
+			<field name="phone"
+				type="text"
+				label="COM_GTPIHPSSURVEY_FIELD_PHONE"
+				class="input-medium"
+			/>
+			<field name="email"
+				type="email"
+				label="COM_GTPIHPSSURVEY_FIELD_EMAIL"
+				class="input-xxlarge"
+				required="true"
+				validate="email"
+			/>
+			<field name="market_ids"
+				type="market"
+				label="COM_GTPIHPSSURVEY_FIELD_MARKETS"
+				class="input-xxlarge"
+				multiple="true"
+			>
+				<option value="0">COM_GTPIHPSSURVEY_OPT_ALL_MARKETS</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="password">
+			<field name="password" 
+				type="password"
+				autocomplete="off"
+				class="validate-password"
+				filter="raw"
+				validate="password"
+				label="JGLOBAL_PASSWORD"
+				size="30"
+			/>
+			<field name="password2" 
+				type="password"
+				autocomplete="off"
+				class="validate-password"
+				filter="raw"
+				label="COM_GTPIHPSSURVEY_FIELD_PASSWORD2"
+				message="COM_GTPIHPSSURVEY_PASSWORD_NOT_EQUAL"
+				size="30"
+				validate="equals"
+				field="password"
+			/>
+		</fieldset>
+	</fields>
+</form>

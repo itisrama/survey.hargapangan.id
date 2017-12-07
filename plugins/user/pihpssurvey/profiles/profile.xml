@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<form>
+	<fields name="pihpssurvey">
+		<!--<fieldset name="pihpssurvey"
+			label="PLG_USER_PUSIKNAS_SLIDER_LABEL"
+		>
+			<field
+				name="something"
+				type="text"
+				id="something"
+				description="PLG_USER_PUSIKNAS_FIELD_SOMETHING_DESC"
+				filter="string"
+				label="PLG_USER_PUSIKNAS_FIELD_SOMETHING_LABEL"
+				message="PLG_USER_PUSIKNAS_FIELD_SOMETHING_MESSAGE"
+				size="30"
+			/>
+		</fieldset>-->
+	</fields>
+</form>

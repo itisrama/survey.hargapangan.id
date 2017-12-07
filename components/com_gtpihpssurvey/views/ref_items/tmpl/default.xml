@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_GTPIHPSSURVEY_REF_ITEMS_VIEW_DEFAULT_TITLE">
+		<message>
+			<![CDATA[COM_GTPIHPSSURVEY_REF_ITEMS_VIEW_DEFAULT_TITLE]]>
+		</message>
+	</layout>
+
+	<fields name="params">
+		<fieldset name="params"
+			label="COM_GTPIHPSSURVEY_FIELDSET_PARAMS"
+		>
+			<field name="jenis"
+				type="radio"
+				label="COM_GTPIHPSSURVEY_FIELD_JENIS"
+				class="bootstrap-radio"
+			>
+				<option value="fitur">Update Fitur</option>
+
+				<option value="market">Pasar Tradisional</option>
+				<option value="market2">Pasar Modern</option>
+				<option value="market3">Pedagang Besar</option>
+				<option value="seller">Pedagang</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

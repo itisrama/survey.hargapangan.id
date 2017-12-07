@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="/administrator/components/com_gtpihpssurvey/models/fields">
+	<fields>
+		<fieldset name="item">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="published"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="source_id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="name"
+				type="text"
+				label="COM_GTPIHPSSURVEY_FIELD_NAME"
+				class="input-large"
+				required="true"
+			/>
+			<field name="regency_id"
+				type="selectize"
+				label="COM_GTPIHPSSURVEY_FIELD_REGENCY"
+				class="input-large"
+				query="SELECT id, long_name name FROM #__gtpihpssurvey_ref_regencies WHERE id IN (%s) ORDER BY id"
+				task="selectize.getRegencies"
+				requests="{type:'ref_regency', name_field:'long_name'}"
+				child="market_id"
+				required="true"
+			/>
+			<field name="market_id"
+				type="selectize"
+				label="COM_GTPIHPSSURVEY_FIELD_MARKET"
+				class="input-large"
+				query="SELECT id, name FROM #__gtpihpssurvey_ref_markets WHERE id IN (%s) ORDER BY id"
+				task="selectize.getItems"
+				requests="{type:'ref_market'}"
+				parent_f="regency_id"
+				parent_v="regency_id"
+				required="true"
+				wheres="price_type_id = 1"
+			/>
+			<field name="commodity_ids"
+				type="commodity"
+				label="COM_GTPIHPSSURVEY_FIELD_COMMODITY"
+				class="input-large"
+				required="true"
+				multiple="true"
+			/>
+			<field name="phone"
+				type="text"
+				label="COM_GTPIHPSSURVEY_FIELD_PHONE"
+				class="input-medium"
+				required="false"
+			/>
+			<field name="address"
+				type="textarea"
+				label="COM_GTPIHPSSURVEY_FIELD_ADDRESS"
+				class="input-xlarge"
+				required="false"
+			/>
+		</fieldset>
+	</fields>
+</form>

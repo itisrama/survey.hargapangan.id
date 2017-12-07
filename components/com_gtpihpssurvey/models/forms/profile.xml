@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form addfieldpath="/administrator/components/com_gtpihpssurvey/models/fields">
+	<fields name="user">
+		<fieldset name="item">
+			<field name="id"
+				type="althidden"
+				readonly="true" 
+			/>
+			<field name="username"
+				label="COM_GTPIHPSSURVEY_FIELD_USERNAME"
+				type="text"
+				class="input-medium"
+				readonly="true"
+			/>
+			<field name="name"
+				type="text"
+				label="COM_GTPIHPSSURVEY_FIELD_NAME"
+				class="input-large"
+				required="true"
+			/>
+			<field name="email"
+				type="text"
+				label="COM_GTPIHPSSURVEY_FIELD_EMAIL"
+				class="input-large"
+				required="true"
+			/>
+		</fieldset>
+		<fieldset name="password">
+			<field name="password" 
+				type="password"
+				autocomplete="off"
+				class="validate-password"
+				filter="raw"
+				validate="password"
+				label="JGLOBAL_PASSWORD"
+				size="30"
+			/>
+			<field name="password2" 
+				type="password"
+				autocomplete="off"
+				class="validate-password"
+				filter="raw"
+				label="COM_GTPIHPSSURVEY_FIELD_PASSWORD2"
+				message="COM_GTPIHPSSURVEY_PASSWORD_NOT_EQUAL"
+				size="30"
+				validate="equals"
+				field="password"
+			/>
+		</fieldset>
+	</fields>
+</form>
